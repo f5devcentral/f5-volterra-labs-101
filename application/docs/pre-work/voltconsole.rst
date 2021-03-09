@@ -16,12 +16,21 @@ Namespace
 Exercise 1: Find your Namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Please log into your assigned Volterra tenant. 
+#. Please log into your assigned Volterra tenant.
 
-    .. note:: Each Volterra tenant has a unique login URL.  
-        If you are unsure which tenant you belong to, please post a question in the lab chat. 
+    .. note:: Each Volterra tenant has a unique login URL.
+        If you are unsure which tenant you belong to, please post a question in the lab chat.
 
-#. Once you log in, you will need to identify your namespace.  
+   Use volterra.io select login:
+
+    .. image:: ../_static/volterralogin.png
+
+   F5 teams, wil need to select Teams or Organization Plans, if you are a customer select Free or Individual Plans
+
+    .. image:: ../_static/volterralogin_team.png
+
+
+#. Once you log in, you will need to identify your namespace.
 
     .. note:: It will usually be the user-part of your F5 email address with the period replaced with a hyphen.  For example,
         if your F5 email address is eric.chen @ f5.com  you can find a namespace of
@@ -44,7 +53,7 @@ Exercise 2: Create a Site Token
 
     .. image:: ../_static/add-site-token-button.png
 
-#. Provide a name for the token.  
+#. Provide a name for the token.
 
     You can use the same unique name that was assigned for your namespace (i.e. first initial-lastname).
 
@@ -57,7 +66,7 @@ Volterra uses the latitude/longitude of a site to assist in finding the closest
 geographic Regional Edge locations.  The following is meant to help you find
 a location that is close to the UDF deployment location that you selected.
 
-One method of finding a location is to search Google Maps, right click and 
+One method of finding a location is to search Google Maps, right click and
 highlight the GPS coordinates.  This will copy the values into your clipboard.
 |geolocation|
 
@@ -86,7 +95,7 @@ there is a known issue with using the Site UI and CLI is the workaround.
       $ tmux
       $ ssh admin@10.1.1.6
 
-    When prompted, use the following values from "Change Password".  
+    When prompted, use the following values from "Change Password".
 
 #. Change Password
 
@@ -99,7 +108,7 @@ there is a known issue with using the Site UI and CLI is the workaround.
         Password            Volterra123
         =================== =====
     
-    #. Change the default password 
+    #. Change the default password
 
         The result should look like the following.
 
@@ -109,7 +118,7 @@ there is a known issue with using the Site UI and CLI is the workaround.
 
             UNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED
             All actions performed on this device are audited
-            admin@10.1.1.6's password: 
+            admin@10.1.1.6's password:
 
             ...
                                                                                                                                                             
@@ -124,8 +133,8 @@ there is a known issue with using the Site UI and CLI is the workaround.
             ? Please type your new password *****
             ? Please retype your new password *****
 
-#. Configure the site from the command line: 
-    Type "configure" and follow the prompts. Customize the example values below with your details.  
+#. Configure the site from the command line:
+    Type "configure" and follow the prompts. Customize the example values below with your details.
     After completion, skip to the "Accept Registration" exercise below.
 
     =================== =====
@@ -151,7 +160,7 @@ there is a known issue with using the Site UI and CLI is the workaround.
         ? What is your hostname? [optional] main-0
         ? What is your latitude? [optional] 47.6
         ? What is your longitude? [optional] -122.3
-        ? What is your default fleet name? [optional] 
+        ? What is your default fleet name? [optional]
         ? Select certified hardware: kvm-voltmesh
         ? Select primary outside NIC: eth0
 
@@ -166,7 +175,7 @@ there is a known issue with using the Site UI and CLI is the workaround.
     longitude: -122.3
     primaryOutsideNic: eth0
     token: 56b6a47f-5ec8-47ea-baf4-xxxxxxx
-    ? Confirm configuration? (y/N) 
+    ? Confirm configuration? (y/N)
 
 Exercise 4b: Configure Site using CLI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -175,7 +184,7 @@ If you used the CLI to configure your site you can skip to Exercise 4: Accept Re
 
 #. From your UDF Deployment find your "volterra" component and click on "Site UI".
 
-    .. image:: ../_static/udf-site-ui.png  
+    .. image:: ../_static/udf-site-ui.png
 
 #. Change Password
 
@@ -188,7 +197,7 @@ If you used the CLI to configure your site you can skip to Exercise 4: Accept Re
         Password            Volterra123
         =================== =====
     
-    #. Change the default password 
+    #. Change the default password
 
 #. If you are using the GUI, click on "Configure Now".
 
@@ -204,10 +213,10 @@ If you used the CLI to configure your site you can skip to Exercise 4: Accept Re
     Hostname            main-0
     Certified Hardware  kvm-voltmesh
     Primary Outside NIC eth0
-    Latitude/Longitude      
+    Latitude/Longitude
     =================== =====
 
-#. Click on "Save Configuration". 
+#. Click on "Save Configuration".
 
 
 
@@ -226,7 +235,7 @@ Exercise 5: Accept Registration
 
 #. Click on "Accept" to use the default values (we will modify these in a later lab).
 
-This will start the process of loading the Volterra software that is 
+This will start the process of loading the Volterra software that is
 necessary to connect the site to a Volterra Regional Edge site.
 
     .. note:: It will take several minutes for this to complete.  You can continue to the next step while you wait for it to complete.

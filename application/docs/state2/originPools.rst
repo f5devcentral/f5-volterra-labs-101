@@ -9,7 +9,7 @@ Exercise 1: Create SPA Origin Pools
 
 #. In VoltConsole ensure you are in the *Application* context
 
-    |app-context| 
+    |app-context|
 
 #. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *Origin Pools*
 
@@ -28,7 +28,7 @@ Exercise 1: Create SPA Origin Pools
     Select Type of Origin Server    K8s Service Name of Origin Server on given Sites
     Service Name                    brews-spa.your_namespace
     Select Site or Virtual Site     Virtual Site
-    Site                            The virtual site you created earlier 
+    Site                            The virtual site you created earlier
     Select Network on site          vK8s Networks on Site
     Port                            8081
     ==============================  =====
